@@ -122,7 +122,6 @@ export const reviews = [
     feedback:
       "The product not only met but exceeded my expectations. I'll definitely be a returning customer!",
   },
-  
 ];
 
 export const footerLinks = [
@@ -152,10 +151,6 @@ export const footerLinks = [
       { name: "Email: info@himapay.co.ke", link: "mailto:info@himapay.co.ke" },
       { name: "Phone: +2542222222222222", link: "tel:+25422449354" },
       { name: "About us", link: "/" },
-      { name: "FAQs", link: "/" },
-      { name: "How it works", link: "/" },
-      { name: "Privacy policy", link: "/" },
-      { name: "Payment policy", link: "/" },
     ],
   },
   //   {

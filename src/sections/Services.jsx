@@ -10,8 +10,14 @@ const Services = () => {
           Our
           <span className="text-coral-red "> Services </span>
         </h3>
-
-        <section className="max-container flex flex-wrap gap-9 justify-center">
+        {/*
+         <section className="max-container flex flex-wrap gap-9 justify-center">
+          {services.map((service) => (
+            <ServiceCard key={service.label} {...service} />
+          ))}
+        </section>
+      */}
+        <section className="max-container grid grid-cols-2 gap-3 justify-center">
           {services.map((service) => (
             <ServiceCard key={service.label} {...service} />
           ))}
