@@ -22,10 +22,10 @@ import {
 } from "../assets/images";
 
 export const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about-us", label: "About Us" },
-  { href: "#products", label: "Products" },
-  { href: "#contact-us", label: "Contact Us" },
+  { href: "#home", label: "Home", current: true },
+  { href: "#about-us", label: "About Us", current: false },
+  { href: "#products", label: "Products", current: false },
+  { href: "#contact-us", label: "Contact Us", current: false },
 ];
 
 export const shoes = [
@@ -86,7 +86,7 @@ export const products = [
 export const services = [
   {
     imgURL: truckFast,
-    label: "Payment",
+    label: "Payment Aggregation",
     subtext: "Enjoy seamless shopping with our complimentary shipping service.",
   },
   {

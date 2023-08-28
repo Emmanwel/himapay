@@ -17,7 +17,7 @@ const Services = () => {
           ))}
         </section>
       */}
-        <section className="max-container grid grid-cols-2 gap-3 justify-center">
+        <section className="max-container grid grid-cols-2 gap-9 justify-center">
           {services.map((service) => (
             <ServiceCard key={service.label} {...service} />
           ))}

@@ -54,20 +54,32 @@ const Hero = () => {
           */}
 
             {/* Second set with different heading */}
-            <div className="flex flex-col items-start">
-              <div className="flex justify-center items-center text-center">
-                <h2 className="text-xl font-bold text-center items-center mb-3">
-                  Register as an Individual
-                </h2>
+            <div className="flex flex-col md:flex-row justify-center items-center md:justify-between space-y-4 md:space-y-0 md:space-x-32">
+              <div className="flex flex-col">
+                <div className="flex justify-center items-center text-center">
+                  <h2 className="text-xl font-bold text-center items-center mb-3">
+                    Register as a Business
+                  </h2>
+                </div>
+                <div className="flex gap-4">
+                  <Button label="Merchant Dashboard" iconURL={arrowRight} />
+                </div>
               </div>
-              <div className="flex gap-4">
-                <Button label="Playstore" iconURL={arrowRight} />
-                <Button
-                  label="Appstore"
-                  backgroundColor="bg-white"
-                  borderColor="border-slate-gray"
-                  textColor="text-slate-gray"
-                />
+              <div className="flex flex-col">
+                <div className="flex justify-center items-center text-center">
+                  <h2 className="text-xl font-bold text-center items-center mb-3">
+                    Register as an Individual
+                  </h2>
+                </div>
+                <div className="flex gap-4">
+                  <Button label="Playstore" iconURL={arrowRight} />
+                  <Button
+                    label="Appstore"
+                    backgroundColor="bg-white"
+                    borderColor="border-slate-gray"
+                    textColor="text-slate-gray"
+                  />
+                </div>
               </div>
             </div>
           </div>
