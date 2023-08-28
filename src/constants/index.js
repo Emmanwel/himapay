@@ -86,7 +86,7 @@ export const products = [
 export const services = [
   {
     imgURL: truckFast,
-    label: "Payment Aggregation",
+    label: "Payment",
     subtext: "Enjoy seamless shopping with our complimentary shipping service.",
   },
   {
