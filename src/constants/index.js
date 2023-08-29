@@ -12,10 +12,6 @@ import {
   bigShoe3,
   customer1,
   customer2,
-  shoe4,
-  shoe5,
-  shoe6,
-  shoe7,
   thumbnailShoe1,
   thumbnailShoe2,
   thumbnailShoe3,
@@ -52,34 +48,40 @@ export const statistics = [
 export const products = [
   {
     imgURL: truckFast,
-    label: "Automated Sales Management System",
-    subtext: "Enjoy seamless shopping with our complimentary shipping service.",
+    label: "Automated Retail Management system",
+    subtext:
+      "Manufacturers and producers can use our software to learn in real time how their products are performing in different market segments, while as a retailer you can relieve yourself of stress and focus on customer experience and growth.",
+  },
+
+  {
+    imgURL: support,
+    label: "Project Tracking Escrow.",
+    subtext:
+      "Software developers and their clients can now engage each other harmoniously. A developer? Don't waste your time, receive your pay instantly upon completion of work; A client? Don't lose your money, own the code upon payment.",
   },
   {
     imgURL: shieldTick,
     label: "Supermarket Self-Checkout",
     subtext:
-      "Experience worry-free transactions with our secure payment options.",
+      "Avoid wasting time in the queue. Simply walk in, pick item from the shelf, scan barcode, pay and walk out.",
   },
   {
     imgURL: support,
     label: "Advanced Fare Payment",
-    subtext: "Our dedicated team is here to assist you every step of the way.",
-  },
-  {
-    imgURL: support,
-    label: "Project Tracker",
-    subtext: "Our dedicated team is here to assist you every step of the way.",
+    subtext:
+      "Get to know exactly where to board the bus & where to alight, and how much fare to pay. We also cushion you from loss of luggage and theft.",
   },
   {
     imgURL: truckFast,
     label: "Restaurant Optimization",
-    subtext: "Enjoy seamless shopping with our complimentary shipping service.",
+    subtext:
+      "Improve your restaurant's productivity and save time for both your staff and customers by using our RMS software.",
   },
   {
     imgURL: truckFast,
     label: "Remote Token Buying",
-    subtext: "Enjoy seamless shopping with our complimentary shipping service.",
+    subtext:
+      "Embrace convenience and load your token in the meter automatically even when you're away from home. Don't worry if the caretaker locked the meter box.",
   },
 ];
 
@@ -87,23 +89,26 @@ export const services = [
   {
     imgURL: truckFast,
     label: "Payment Aggregation",
-    subtext: "Enjoy seamless shopping with our complimentary shipping service.",
+    subtext:
+      "Our end-to-end aggregation services ensure your business doesn't lose out on sales due to limited payment options for the customer.",
   },
   {
     imgURL: shieldTick,
     label: "Wallets",
     subtext:
-      "Experience worry-free transactions with our secure payment options.",
+      "The human touch of HimaPay's wallets makes you feel alive when doing peer-to-peer & cross-platform transactions.",
   },
   {
     imgURL: support,
     label: "Value Added  Solutions",
-    subtext: "Our dedicated team is here to assist you every step of the way.",
+    subtext:
+      "Leverage HimaPay's expertise to discover new digital business frontiers to spur the growth of your business.",
   },
   {
     imgURL: support,
     label: "API Services",
-    subtext: "Our dedicated team is here to assist you every step of the way.",
+    subtext:
+      "Tap into HimaPay's unique product offerings through our MIZIZI API portal and share with your customers the HimaPay experience.",
   },
 ];
 
