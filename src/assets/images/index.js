@@ -5,11 +5,9 @@ import bigShoe3 from "./big-shoe3.png";
 import customer1 from "./customer1.jpeg";
 import customer2 from "./customer2.svg";
 
-// import footerLogo from "./footer-logo.svg";
 import footerLogo from "./photo1691144775 (1).jpeg";
 
-// import headerLogo from './header-logo.svg'
-import headerLogo from "./photo1691144775 (1).jpeg";
+import headerLogo from "./logo.png";
 
 import offer from "./offer.svg";
 
@@ -17,7 +15,6 @@ import shoe4 from "./shoe4.svg";
 import shoe5 from "./shoe5.svg";
 import shoe6 from "./shoe6.svg";
 import shoe7 from "./shoe7.svg";
-// import shoe8 from "./shoe8.svg";
 import shoe8 from "./photo1691144775 (1).jpeg";
 
 import thumbnailBackground from "./thumbnail-background.svg";

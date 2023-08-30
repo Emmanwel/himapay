@@ -8,10 +8,10 @@ const SuperQuality = () => {
       className="flex justify-between items-center max-lg:flex-col gap-10 w-full max-container"
     >
       <div className="flex flex-1 flex-col">
-        <h2 className="font-palanquin capitalize text-4xl lg:max-w-lg font-bold">
+        <h2 className="font-palanquin capitalize text-4xl lg:max-w-lg font-bold text-blue-teal">
           We Provide You
-          <span className="text-coral-red"> Secure </span>
-          <span className="text-coral-red">Payment </span> Solutions
+          <span className="text-pink-ish"> Secure </span>
+          <span className="text-pink-ish">Payment </span> Solutions
         </h2>
         <p className="mt-4 lg:max-w-lg info-text">
           Ensuring premium services and products, our meticulously crafted

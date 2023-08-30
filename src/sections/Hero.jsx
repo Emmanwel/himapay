@@ -1,26 +1,20 @@
-import { useState } from "react";
-
-import { shoes, statistics } from "../constants";
-import { Button, ShoeCard } from "../components";
-import { bigShoe1 } from "../assets/images";
+import { Button, ButtonStore, ButtonApple } from "../components";
 import { arrowRight } from "../assets/icons";
 
 const Hero = () => {
-  const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
-
   return (
     <>
       <section
         id="home"
         className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
       >
-        <div className="relative xl:w-full flex flex-col justify-center items-center w-full  max-xl:padding-x pt-18">
+        <div className="relative xl:w-full flex flex-col justify-center items-center w-full  max-xl:padding-x pt-15">
           <h1 className="items-center justify-center text-center uppercase mt-6 font-palanquin text-8xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl max-sm:text-[42px] max-sm:leading-[82px] font-bold">
-            <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10 ">
+            <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10 text-blue-teal">
               Be intentional about
             </span>
             <br />
-            <span className="text-coral-red inline-block mt-2">
+            <span className="text-pink-ish inline-block mt-2">
               your finances
             </span>
           </h1>
@@ -30,7 +24,7 @@ const Hero = () => {
               separating funds right at the point of sale. Don't put money meant
               for restocking, loan repayment or profits all in one basket.
               <br />
-              <span className="text-coral-red mt-2 uppercase font-extrabold">
+              <span className="text-pink-ish mt-2 uppercase font-extrabold">
                 Be smart.
               </span>
             </p>
@@ -56,8 +50,8 @@ const Hero = () => {
                   </h2>
                 </div>
                 <div className="flex gap-4">
-                  <Button label="PlayStore" iconURL={arrowRight} />
-                  <Button
+                  <ButtonStore label="PlayStore" iconURL={arrowRight} />
+                  <ButtonApple
                     label="AppStore"
                     backgroundColor="bg-white"
                     borderColor="border-slate-gray"

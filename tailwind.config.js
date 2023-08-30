@@ -28,6 +28,8 @@ export default {
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",
         "white-400": "rgba(255, 255, 255, 0.80)",
+        "pink-ish": "#EB77B9",
+        "blue-teal": "#4CC1EF",
       },
       boxShadow: {
         "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
@@ -35,6 +37,7 @@ export default {
       backgroundImage: {
         hero: "url('assets/images/collection-background.svg')",
         card: "url('assets/images/thumbnail-background.svg')",
+        heroOverlay: "url('assets/images/6663342.jpg')",
       },
       screens: {
         wide: "1440px",

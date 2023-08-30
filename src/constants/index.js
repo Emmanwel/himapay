@@ -1,6 +1,6 @@
 import {
   facebook,
-  instagram,
+  linkedln,
   shieldTick,
   support,
   truckFast,
@@ -153,22 +153,23 @@ export const footerLinks = [
   {
     title: "Get in touch",
     links: [
-      { name: "Email: info@himapay.co.ke", link: "mailto:info@himapay.co.ke" },
-      { name: "Phone: +2542222222222222", link: "tel:+25422449354" },
+      { name: "Email: pay@himapay.co.ke", link: "mailto:pay@himapay.co.ke" },
+      { name: "Phone: +254707595799", link: "tel:0707595799" },
       { name: "About us", link: "/" },
     ],
   },
-  //   {
-  //     title: "Get in touch",
-  //     links: [
-  //       { name: "customer@nike.com", link: "mailto:customer@nike.com" },
-  //       { name: "+92554862354", link: "tel:+92554862354" },
-  //     ],
-  //   },
 ];
 
 export const socialMedia = [
-  { src: facebook, alt: "facebook logo" },
-  { src: twitter, alt: "twitter logo" },
-  { src: instagram, alt: "instagram logo" },
+  { src: facebook, alt: "facebook logo", link: "/" },
+  {
+    src: linkedln,
+    alt: "linkedln logo",
+    link: "https://www.linkedin.com/company/himapay-limited",
+  },
+  {
+    src: twitter,
+    alt: "twitter logo",
+    link: "https://twitter.com/HimaPay?t=eUZA6IG70xgUasrzNj5YXQ&s=09",
+  },
 ];
