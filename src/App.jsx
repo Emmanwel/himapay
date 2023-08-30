@@ -6,6 +6,7 @@ import {
   Services,
   Subscribe,
   SuperQuality,
+  Contact,
 } from "./sections";
 
 const App = () => {
@@ -23,6 +24,9 @@ const App = () => {
       </section>
       <section className="padding">
         <SuperQuality />
+      </section>
+      <section className="padding-x sm:py-32 py-16 w-full bg-blue-teal">
+        <Contact />
       </section>
       <section className="padding-x sm:py-32 py-16 w-full">
         <Subscribe />
