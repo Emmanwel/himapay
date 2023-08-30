@@ -12,7 +12,7 @@ const App = () => {
   return (
     <main className="relative">
       <Nav />
-      <section className="xl:padding-l wide:padding-r padding-b bg-heroOverlay ">
+      <section className="xl:padding-l wide:padding-r padding-b bg-heroOverlay bg-cover bg-no-repeat">
         <Hero />
       </section>
       <section className="padding-x py-5">
