@@ -1,5 +1,3 @@
-import { Button } from "../components";
-
 const Contact = () => {
   const phoneNumber = "+254707595799";
   return (
@@ -11,7 +9,7 @@ const Contact = () => {
         Let's collaborate on your next solution.
       </h1>
 
-      <div className="text-5xl font-bold mb-4">
+      <div className="text-4xl font-bold mb-4 ">
         <a
           href={`tel:${phoneNumber}`}
           className="text-pink-ish hover:text-pink-ish"
