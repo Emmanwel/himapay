@@ -9,7 +9,7 @@ const Contact = () => {
         Let's collaborate on your next solution.
       </h1>
 
-      <div className="text-4xl font-bold mb-4 ">
+      <div className="text-9xl font-bold mb-4 px-4">
         <a
           href={`tel:${phoneNumber}`}
           className="text-pink-ish hover:text-pink-ish"

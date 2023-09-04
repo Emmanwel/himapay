@@ -16,6 +16,7 @@ export default {
       "6xl": ["84px", "96px"],
       "7xl": ["92px", "100px"],
       "8xl": ["96px", "106px"],
+       "9xl": ["40px", "52px"],
     },
     extend: {
       fontFamily: {
