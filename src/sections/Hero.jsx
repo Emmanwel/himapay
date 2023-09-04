@@ -30,7 +30,7 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="mt-8 flex gap-10 px-20">
+          <div className="mt-8 flex gap-10 px-0">
             {/* Second set with different heading */}
             <div className="flex flex-col md:flex-row justify-center items-center md:justify-between space-y-4 md:space-y-0 md:space-x-32">
               <div className="flex flex-col">
