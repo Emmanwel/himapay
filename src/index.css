@@ -1,58 +1,202 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --font-sans:
+    "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+  /* Original HimaPay colours. The bare names (bg-pink-ish, text-blue-teal)
+     are the exact brand values; numbered steps are shades of the same hue
+     for hover states and small text. */
+  --color-blue-teal: #4cc1ef;
+  --color-blue-teal-50: #f1fafe;
+  --color-blue-teal-100: #e1f4fc;
+  --color-blue-teal-200: #c2eafa;
+  --color-blue-teal-300: #98dbf6;
+  --color-blue-teal-500: #36b6e8;
+  --color-blue-teal-600: #1e9fd2;
+  --color-blue-teal-700: #1d82aa;
+  --color-blue-teal-800: #1a6684;
+  --color-blue-teal-900: #174e64;
+
+  --color-pink-ish: #eb77b9;
+  --color-pink-ish-50: #fdf2f8;
+  --color-pink-ish-100: #fbe2f0;
+  --color-pink-ish-200: #f6c5e1;
+  --color-pink-ish-300: #f19dcd;
+  --color-pink-ish-500: #de409a;
+  --color-pink-ish-600: #c82883;
+  --color-pink-ish-700: #a2256c;
+  --color-pink-ish-800: #7e2056;
+  --color-pink-ish-900: #5f1b42;
+
+  --color-slate-gray: #6d6d6d;
+  --color-pale-blue: #f5f6ff;
+  --color-primary: #eceeff;
+  --color-coral-red: #ff6452;
+  --color-white-400: rgb(255 255 255 / 0.8);
+
+  --shadow-3xl: 0 10px 40px rgb(0 0 0 / 0.1);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-dash: dash 1.6s linear infinite;
+  --animate-scan: scan 2.4s ease-in-out infinite;
+  --animate-march-x: march-x 0.8s linear infinite;
+  --animate-march-y: march-y 0.8s linear infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: -16;
+    }
+  }
+
+  @keyframes scan {
+    0%,
+    100% {
+      top: 12%;
+    }
+    50% {
+      top: 82%;
+    }
+  }
+
+  @keyframes march-x {
+    to {
+      background-position: 12px 0;
+    }
+  }
+
+  @keyframes march-y {
+    to {
+      background-position: 0 12px;
+    }
+  }
 }
 
-@layer components {
-  .max-container {
-    max-width: 1440px;
-    margin: 0 auto;
+/* Smooth cross-fade between pages in browsers that support it; the header
+   stays put while the content changes underneath. */
+@view-transition {
+  navigation: auto;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Keep anchored sections clear of the fixed header */
+    scroll-padding-top: 6rem;
+    -webkit-font-smoothing: antialiased;
   }
 
-  .input {
-    @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
+  body {
+    @apply bg-white text-neutral-900;
+  }
+
+  ::selection {
+    @apply bg-pink-ish-100 text-pink-ish-900;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
   }
 }
 
-@layer utilities {
-  .padding {
-    @apply sm:px-16 px-8 sm:py-24 py-12;
+/* Same page width as the original site: 1440px max with 64px gutters on
+   desktop. */
+@utility max-container {
+  @apply mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16;
+}
+
+@utility info-text {
+  @apply text-lg leading-relaxed text-slate-gray;
+}
+
+@utility focus-ring {
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-teal-700;
+}
+
+/* Slim brand-coloured slider. Set --range-fill (0-100%) and --range-color
+   inline to paint the filled part of the track. */
+@utility range {
+  appearance: none;
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    var(--range-color) 0 var(--range-fill),
+    var(--color-primary) var(--range-fill) 100%
+  );
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+    background: white;
+    border: 5px solid var(--range-color);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.2);
   }
 
-  .padding-x {
-    @apply sm:px-16 px-8;
+  &::-moz-range-thumb {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+    background: white;
+    border: 5px solid var(--range-color);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.2);
   }
 
-  .padding-y {
-    @apply sm:py-24 py-12;
+  &:focus-visible {
+    outline: 2px solid var(--color-blue-teal-700);
+    outline-offset: 6px;
+  }
+}
+
+/* Scroll-in animation, toggled by <Reveal>. Content stays fully visible for
+   anyone who prefers reduced motion. */
+@utility reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+
+  &.is-visible {
+    opacity: 1;
+    transform: none;
   }
 
-  .padding-l {
-    @apply sm:pl-16 pl-8;
-  }
-
-  .padding-r {
-    @apply sm:pr-16 pr-8;
-  }
-
-  .padding-t {
-    @apply sm:pt-24 pt-12;
-  }
-
-  .padding-b {
-    @apply sm:pb-24 pb-12;
-  }
-
-  .info-text {
-    @apply font-montserrat text-slate-gray text-lg leading-7;
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
