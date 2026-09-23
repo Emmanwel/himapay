@@ -1,22 +1,33 @@
+import { FeatureCard, Reveal, SectionHeading } from "../components";
 import { services } from "../constants";
-import { ServiceCard } from "../components";
 
-const Services = () => {
-  return (
-    <>
-      <section id="products" className="max-container max-sm:mt-5">
-        <h3 className="font-palanquin text-center text-4xl font-bold mb-7">
-          Our
-          <span className="text-pink-ish "> Services </span>
-        </h3>
-        <section className="max-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-10 justify-center">
-          {services.map((service) => (
-            <ServiceCard key={service.label} {...service} />
-          ))}
-        </section>
-      </section>
-    </>
-  );
-};
+const Services = () => (
+  <section
+    id="services"
+    aria-labelledby="services-title"
+    className="bg-pale-blue py-20 sm:py-28"
+  >
+    <div className="max-container">
+      <SectionHeading
+        id="services-title"
+        eyebrow="What we do"
+        title={
+          <>
+            Our <span className="text-pink-ish">Services</span>
+          </>
+        }
+        description="From collecting payments to building on our API, HimaPay gives your business the tools to transact with confidence."
+      />
+
+      <div className="mt-16 grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
+        {services.map((service, index) => (
+          <Reveal key={service.label} delay={index * 100}>
+            <FeatureCard {...service} />
+          </Reveal>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 export default Services;

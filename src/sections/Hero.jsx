@@ -1,85 +1,65 @@
-import { Button, ButtonStore, ButtonApple } from "../components";
-import { arrowRight } from "../assets/icons";
+import { ArrowRight } from "lucide-react";
+import { Backdrop, Button, SplitPreview, StoreBadges } from "../components";
+import { merchantCta } from "../constants";
 
-const Hero = () => {
-  return (
-    <>
-      <section
-        id="home"
-        className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
-      >
-        <div className="relative xl:w-full flex flex-col justify-center items-center w-full  max-xl:padding-x pt-15 ">
-          <h1 className="items-center justify-center text-center uppercase font-palanquin mt-6 text-8xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl max-sm:text-[42px] max-sm:leading-[82px] font-bold">
-            <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10 text-blue-teal">
-              Be intentional about
-            </span>
-            <br />
-            <span className="text-pink-ish inline-block mt-2">
-              your finances
-            </span>
-          </h1>
-          <div className="justify-center">
-            <p className=" capitalize text-xl text-slate-gray leading-10 mt-6 mb-10 max-w-prose text-center ">
-              HimaPay helps retail merchants to manage their sales revenue by
-              separating funds right at the point of sale. Don't put money meant
-              for restocking, loan repayment or profits all in one basket.
-              <br />
-              <span className="text-pink-ish mt-2 uppercase font-extrabold">
-                Be smart.
-              </span>
-            </p>
-          </div>
+const Hero = () => (
+  <section
+    id="home"
+    aria-labelledby="hero-title"
+    className="relative isolate overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-24"
+  >
+    <Backdrop />
 
-          <div className="mt-8 flex gap-10 px-0">
-            {/* Second set with different heading */}
-            <div className="flex flex-col md:flex-row justify-center items-center md:justify-between space-y-4 md:space-y-0 md:space-x-32">
-              <div className="flex flex-col">
-                <div className="flex justify-center items-center text-center">
-                  <h2 className="text-xl font-bold text-center items-center mb-3">
-                    Register as a Business
-                  </h2>
-                </div>
-                <div className="flex gap-4">
-                  <Button label="Merchant Dashboard" iconURL={arrowRight} />
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <div className="flex justify-center items-center text-center">
-                  <h2 className="text-xl font-bold text-center items-center mb-3">
-                    Register as an Individual
-                  </h2>
-                </div>
+    <div className="max-container grid items-center gap-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
+      <div className="text-center lg:text-left">
+        <p className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-1.5 text-sm font-semibold text-neutral-700 shadow-sm ring-1 ring-neutral-200 backdrop-blur">
+          <span className="size-2 rounded-full bg-pink-ish" />
+          Simple · Convenient · Secure
+        </p>
 
-                {/**/}
-                <div className="flex sm:flex-row gap-4 flex-col">
-                  <ButtonStore label="PlayStore" iconURL={arrowRight} />
-                  <ButtonApple
-                    label="AppStore"
-                    backgroundColor="bg-white"
-                    borderColor="border-slate-gray"
-                    textColor="text-slate-gray"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+        <h1
+          id="hero-title"
+          className="mt-6 text-[2.75rem] leading-[1.05] font-extrabold tracking-tight text-balance sm:text-6xl xl:text-7xl"
+        >
+          <span className="text-blue-teal">Be intentional about</span>{" "}
+          <span className="text-pink-ish">your finances</span>
+        </h1>
 
-          {/*
-         <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
-          {statistics.map((stat, index) => (
-            <div key={index}>
-              <p className="text-4xl font-palanquin font-bold">{stat.value}</p>
-              <p className="leading-7 font-montserrat text-slate-gray">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+        <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-pretty text-slate-gray sm:text-xl lg:mx-0">
+          HimaPay helps retail merchants manage their sales revenue by
+          separating funds right at the point of sale. Don&apos;t put money
+          meant for restocking, loan repayment or profit all in one basket.{" "}
+          <strong className="font-extrabold text-pink-ish uppercase">
+            Be smart.
+          </strong>
+        </p>
+
+        <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+          <Button
+            href={merchantCta.href}
+            icon={ArrowRight}
+            className="max-sm:w-full"
+          >
+            {merchantCta.label}
+          </Button>
+          <Button
+            href="/merchants/#calculator"
+            variant="secondary"
+            className="max-sm:w-full"
+          >
+            Try the split calculator
+          </Button>
         </div>
-      */}
+
+        <div className="mt-12 border-t border-neutral-200/80 pt-8">
+          <p className="text-sm font-semibold">Register as an individual</p>
+          <StoreBadges className="mt-4 justify-center lg:justify-start" />
         </div>
-      </section>
-    </>
-  );
-};
+      </div>
+
+      <SplitPreview />
+    </div>
+  </section>
+);
 
 export default Hero;

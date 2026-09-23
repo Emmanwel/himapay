@@ -1,0 +1,3 @@
+# For Apache / cPanel hosting: serve the branded 404 page.
+# Other static hosts (Netlify, Vercel, Cloudflare Pages) pick up 404.html automatically.
+ErrorDocument 404 /404.html

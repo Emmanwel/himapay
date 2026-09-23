@@ -1,19 +1,35 @@
+import ApiDiagram from "./ApiDiagram";
+import Backdrop from "./Backdrop";
 import Button from "./Button";
-import ButtonStore from "./ButtonStore";
-import ButtonApple from "./ButtonApple";
-import Nav from "./Nav";
-import ShoeCard from "./ShoeCard";
-import PopularProductCard from "./PopularProductCard";
-import ServiceCard from "./ServiceCard";
-import ReviewCard from "./ReviewCard";
+import ContactForm from "./ContactForm";
+import CtaBanner from "./CtaBanner";
+import Faq from "./Faq";
+import FeatureCard from "./FeatureCard";
+import Layout from "./Layout";
+import Logo from "./Logo";
+import PageHero from "./PageHero";
+import ProductVisual from "./ProductVisual";
+import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
+import SplitCalculator from "./SplitCalculator";
+import SplitPreview from "./SplitPreview";
+import StoreBadges from "./StoreBadges";
 
 export {
+  ApiDiagram,
+  Backdrop,
   Button,
-  ButtonStore,
-  ButtonApple,
-  Nav,
-  ShoeCard,
-  PopularProductCard,
-  ServiceCard,
-  ReviewCard,
+  ContactForm,
+  CtaBanner,
+  Faq,
+  FeatureCard,
+  Layout,
+  Logo,
+  PageHero,
+  ProductVisual,
+  Reveal,
+  SectionHeading,
+  SplitCalculator,
+  SplitPreview,
+  StoreBadges,
 };
